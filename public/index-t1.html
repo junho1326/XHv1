@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<!--
+	Company Name: 
+	Description: HTML/CSS 
+	Author: Junho Seo / Junyeong Kim 
+	Version: 0.0.1
+-->
+
+<html>
+ 	<head>
+		<title>Haswell - Responsive HTML5 Template</title>
+		<meta charset=utf-8 >
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+		<meta name="robots" content="index, follow" > 
+		<meta name="keywords" content="HTML5 Template" > 
+		<meta name="description" content="Haswell - Responsive HTML5 Template" > 
+		<meta name="author" content="Vladimir Azarushkin">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+		
+<!-- CSS -->
+    <!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <!-- GOOGLE FONT -->		
+		<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS -->		
+		<link rel="stylesheet" href="css/icons-fonts.css" >	
+    <!-- CSS THEME -->		
+		<link rel="stylesheet" href="css/style.css" >
+    <!-- ANIMATE -->	
+		<link rel='stylesheet' href="css/animate.min.css">
+    <!-- IE Warning CSS -->
+		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
+    <!-- Magnific popup  in style.css	Owl Carousel Assets in style.css -->		
+<!-- CSS end -->
+
+<!-- JS begin some js files in bottom of file-->
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+    <!-- Modernizr -->
+    <!-- <script src="js/modernizr.js"></script> -->
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCSMinPZ9WzYbqxf6SGMzIovWwz9AvHF3Y",
+    authDomain: "xhproj1.firebaseapp.com",
+    databaseURL: "https://xhproj1.firebaseio.com",
+    storageBucket: "xhproj1.appspot.com"
+  };
+  firebase.initializeApp(config);
+  var menu = document.getElementById('info');
+  var menuRef = firebase.database().ref().child('web/menus');
+  menuRef.on('value',function(snapshot){
+    snapshot.forEach(snap => {
+      snap.forEach(arr => {
+        console.log(arr.val().chn);
+      })
+    });
+      
+  })
+   
+  
+</script>
+<!-- Firebase -->
+	</head>
+	<body>
+	
+		<!-- LOADER -->	
+		<div id="loader-overflow">
+      <div id="loader3">Please enable JS</div>
+    </div>	
+
+		<div id="wrap" class="boxed ">
+			<div class="grey-bg"> <!-- Grey BG  -->	
+				
+				<!--[if lte IE 8]>
+				<div id="ie-container">
+					<div id="ie-cont-close">
+						<a href='#' onclick='javascript&#058;this.parentNode.parentNode.style.display="none"; return false;'><img src='images/ie-warn/ie-warning-close.jpg' style='border: none;' alt='Close'></a>
+					</div>
+					<div id="ie-cont-content" >
+						<div id="ie-cont-warning">
+							<img src='images/ie-warn/ie-warning.jpg' alt='Warning!'>
+						</div>
+						<div id="ie-cont-text" >
+							<div id="ie-text-bold">
+								You are using an outdated browser
+							</div>
+							<div id="ie-text">
+								For a better experience using this site, please upgrade to a modern web browser.
+							</div>
+						</div>
+						<div id="ie-cont-brows" >
+							<a href='http://www.firefox.com' target='_blank'><img src='images/ie-warn/ie-warning-firefox.jpg' alt='Download Firefox'></a>
+							<a href='http://www.opera.com/download/' target='_blank'><img src='images/ie-warn/ie-warning-opera.jpg' alt='Download Opera'></a>
+							<a href='http://www.apple.com/safari/download/' target='_blank'><img src='images/ie-warn/ie-warning-safari.jpg' alt='Download Safari'></a>
+							<a href='http://www.google.com/chrome' target='_blank'><img src='images/ie-warn/ie-warning-chrome.jpg' alt='Download Google Chrome'></a>
+						</div>
+					</div>
+				</div>
+				<![endif]-->
+				
+				<!-- HEADER TOP BAR MAGAZINE NO-TRANSPARENT -->
+				<header id="nav" class="header header-1 no-transparent mobile-no-transparent header-mag">
+        
+          <!-- TOP BAR -->
+          <div class="top-bar">
+            <div class="container-m-30 clearfix">
+              
+              <!-- LEFT SECTION -->
+              <ul class="top-bar-section left">
+                <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" title="Linked"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#" title="Email"><i class="fa fa-envelope"></i></a></li>
+              </ul>
+              
+              <!-- RIGHT SECTION -->
+              <ul class="top-bar-section right">
+                <li><a href="#">主頁</a></li>
+                <li><a href="#">廣告</a></li>
+                <li><a href="#">常問問題</a></li>
+                <li><a href="#">登錄</a></li>
+              </ul>
+              
+            </div>
+          </div>
+          
+				  <div class="header-wrapper">
+					<div class="container-m-30 clearfix">
+					  <div class="logo-row">
+					  
+						<!-- LOGO --> 
+						<div class="logo-container-2">
+                <div class="logo-2">
+                  <a href="index.html" class="clearfix">
+                    <img src="images/logo.png" class="logo-img" alt="Logo">
+                  </a>
+                </div>
+              </div>
+						<!-- BUTTON --> 
+						<div class="menu-btn-respons-container">
+							<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target="#main-menu .navbar-collapse">
+								<span aria-hidden="true" class="icon_menu hamb-mob-icon"></span>
+							</button>
+						</div>
+					 </div>
+					</div>
+
+					<!-- MAIN MENU CONTAINER -->
+					<div class="main-menu-container">
+						
+						  <div class="container-m-30 clearfix">	
+						  
+								<!-- MAIN MENU -->
+								<div id="main-menu">
+								  <div class="navbar navbar-default" role="navigation">
+
+									<!-- MAIN MENU LIST -->
+									<nav class="collapse collapsing navbar-collapse right-1024">
+									  <ul class="nav navbar-nav">
+                      <!-- MENU ITEM -->
+                      <li class="parent">
+                        <a href="#"><div class="main-menu-title">信息</div></a>
+                        <ul class="sub" id="info">
+                          <li><a href="./pages/info/job.html">求职招聘</a></li>
+                          <li><a href="./pages/info/estate.html">房屋信息</a></li>
+                          <li><a href="./pages/info/used.html">跳蚤市场</a></li>
+                          <li><a href="./pages/info/shipping.html">直接购买</a></li>
+                          <li><a href="./pages/info/cosmetics.html">化 妆 品</a></li>
+                        </ul>
+                      </li>
+                    
+                      <!-- MENU ITEM -->
+                      <li class="parent">
+                        <a href="#"><div class="main-menu-title">旅行</div></a>
+                        <ul class="sub">
+                          <li><a href="./pages/travel/travel.html">旅游攻略</a></li>
+                          <li><a href="./pages/travel/beauty.html">韩国整形</a></li>
+                          <li><a href="./pages/travel/coupon.html">优 惠 券</a></li>
+                        </ul>
+                      </li>
+                      <!-- MENU ITEM -->
+                      <li class="parent">
+                        <a href="#"><div class="main-menu-title">实用</div></a>
+                        <ul class="sub">
+                          <li><a href="./pages/life/consulting.html">生活问题</a></li>
+                          <li><a href="./pages/life/study.html">留学专业</a></li>
+                          <li><a href="./pages/life/food.html">美 食 店</a></li>
+                          <li><a href="./pages/life/evaluation.html">讲座评估</a></li>
+                        </ul>
+                      </li>
+                      <!-- MENU ITEM -->
+                      <li class="parent">
+                        <a href="#"><div class="main-menu-title">交流</div></a>
+                        <ul class="sub">
+                          <li><a href="./pages/trade/friends.html">交友频道</a></li>
+                          <li><a href="./pages/trade/pets.html">宠物花草</a></li>
+                          <li><a href="./pages/trade/visa.html">签证交流</a></li>
+                          <li><a href="./pages/trade/club.html">爱好 / 社团</a></li>
+                        </ul>
+                      </li>
+                      
+									  </ul>
+						  
+									</nav>
+
+								  </div>
+								</div>
+								<!-- END main-menu -->
+								
+						  </div>
+						  <!-- END container-m-30 -->
+					</div>
+					<!-- END main-menu-container -->
+				  </div>
+				  <!-- END header-wrapper -->
+				</header>
+        
+        <!-- COTENT CONTAINER -->
+        <div class="container p-140-cont">
+          <div class="row">
+          
+            <!-- CONTENT -->
+            <div class="col-lg-9 col-md-9 col-sm-12 blog-main-posts">
+              
+              <!-- Post Item carousel -->
+              <div class="wow fadeIn" >
+                  
+                <!-- CAOUSEL SLIDER START -->
+								<div class="fullwidth-slider-auto owl-carousel owl-arrows-bg post-prev-img owl-white-bg pb-10" >
+                
+                  <!-- Main AD Slider Item 001 START-->		
+									<div class="item m-0">	
+										<div class="mb-30">
+											<img alt="about us" src="images/blog/post-wide-5.jpg">
+										</div>
+                    <div class="post-prev-title">
+                      <h3><a href="">Sample AD 001</a></h3>
+                    </div>
+                    <div class="post-prev-info mb-40">
+                      JULE 10<span class="slash-divider">/</span>
+                      <a href="">21 COMMENTS</a>
+                      <span class="slash-divider">/</span>
+                      <a href="">JOHN DOE</a><span class="slash-divider">/</span>
+                      <a href="#">DESIGN</a>, <a href="#">DEVELOPMENT</a>
+                    </div>
+									</div>
+                  <!-- Main AD Slider Item 001 END-->	
+                  <!-- Main AD Slider Item 002 START-->		
+									<div class="item m-0">	
+										<div class="mb-30">
+											<img alt="about us" src="images/blog/post-wide-5.jpg">
+										</div>
+                    <div class="post-prev-title">
+                      <h3><a href="">Sample AD 002</a></h3>
+                    </div>
+                    <div class="post-prev-info mb-40">
+                      JULE 10<span class="slash-divider">/</span>
+                      <a href="">21 COMMENTS</a>
+                      <span class="slash-divider">/</span>
+                      <a href="">JOHN DOE</a><span class="slash-divider">/</span>
+                      <a href="#">DESIGN</a>, <a href="#">DEVELOPMENT</a>
+                    </div>
+                  </div>
+                  <!-- Main AD Slider Item 002 END-->	
+                </div>
+                <!-- CAOUSEL SLIDER END -->
+              </div>
+                        
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <!-- BOARD 001 TITTLE -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">                      
+                      <div class="heading-line h4-line">
+                        <h4><strong>信息</strong></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 001 CONTENT -->
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE 001-1</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE-001-2</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 001 SUBCONTENT -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="tabs-3">
+                        <ul class="nav nav-tabs bootstrap-tabs mb-30">
+                          <li class="active"><a href="#job" class="a-inv" data-toggle="tab"><i class="fa fa-user"></i></a></li>
+                          <li><a href="#estate" class="a-inv" data-toggle="tab"><i class="fa fa-user"></i></a></li>
+                          <li><a href="#used" class="a-inv" data-toggle="tab"><i class="fa fa-user"></i></a></li>
+                          <li><a href="#shipping" class="a-inv" data-toggle="tab"><i class="fa fa-user"></i></a></li>
+                          <li><a href="#cosmetics" class="a-inv" data-toggle="tab"><i class="fa fa-user"></i></a></li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane fade in active" id="job">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/1.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TIME FOR MINIMALISM</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>      
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="board-001-sub-002">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/4.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title=""> NULLA VITAE IMPERD</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TAM EU QUAM </a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">ALIQUAM AC LUCTUS</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <!-- BOARD 002 TITTLE -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">                      
+                      <div class="heading-line h4-line">
+                        <h4><strong>旅行</strong></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 002 CONTENT -->
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE 002-1</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE-002-2</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 002 SUBCONTENT -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="tabs-3">
+                        <ul class="nav nav-tabs bootstrap-tabs mb-30">
+                          <li class="active"><a href="#board-002-sub-001" class="a-inv" data-toggle="tab">POPULAR</a></li>
+                          <li><a href="#board-002-sub-002" class="a-inv" data-toggle="tab">RECENT</a></li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane fade in active" id="board-002-sub-001">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/1.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TIME FOR MINIMALISM</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">NEW TRENDS IN WEB</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">THE SOUND OF LIFE</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="board-002-sub-002">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/4.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title=""> NULLA VITAE IMPERD</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TAM EU QUAM </a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">ALIQUAM AC LUCTUS</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+
+              <!-- ADS -->
+              <div class="text-center mt-30 mb-50">
+                <a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel"><img class="" src="images/ads720.jpg" alt="img"></a>
+              </div>
+              
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <!-- BOARD 003 TITTLE -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">                      
+                      <div class="heading-line h4-line">
+                        <h4><strong>实用</strong></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 003 CONTENT -->
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE 003-1</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE-003-2</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 003 SUBCONTENT -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <div class="tabs-3">
+                        <ul class="nav nav-tabs bootstrap-tabs mb-30">
+                          <li class="active"><a href="#board-003-sub-001" class="a-inv" data-toggle="tab">POPULAR</a></li>
+                          <li><a href="#board-003-sub-002" class="a-inv" data-toggle="tab">RECENT</a></li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane fade in active" id="board-003-sub-001">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/1.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TIME FOR MINIMALISM</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">NEW TRENDS IN WEB</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">THE SOUND OF LIFE</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="board-003-sub-002">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/4.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title=""> NULLA VITAE IMPERD</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TAM EU QUAM </a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">ALIQUAM AC LUCTUS</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <!-- BOARD 004 TITTLE -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">                      
+                      <div class="heading-line h4-line">
+                        <h4><strong>交流</strong></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 004 CONTENT -->
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE 004-1</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 wow fadeIn pb-70">
+                      <div class="post-prev-img">
+                        <a href=""><img src="images/blog/post-prev-1.jpg" alt="img"></a>
+                      </div>
+                        
+                      <div class="post-prev-title">
+                        <h3><a href="">TITLE-004-2</a></h3>
+                      </div>
+                        
+                      <div class="post-prev-info">
+                        JULE 10<span class="slash-divider">/</span><a href="">JOHN DOE</a>
+                      </div>
+                        
+                      <div class="post-prev-text">
+                        BOARD TEXT PREVIEW.... 
+                      </div>
+                        
+                      <div class="post-prev-more-cont clearfix">
+                        <div class="right" >
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_comment_alt"></span><span class="icon-count">21</span></a>
+                          <a href="" class="post-prev-count"><span aria-hidden="true" class="icon_heart_alt"></span><span class="icon-count">53</span></a>
+                          <a href="#" class="post-prev-count dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
+                            <span aria-hidden="true" class="social_share"></span>
+                          </a>
+                          <ul class="social-menu dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                            </li>
+                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true" class="social_dribbble"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- BOARD 004 SUBCONTENT -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <div class="tabs-3">
+                        <ul class="nav nav-tabs bootstrap-tabs mb-30">
+                          <li class="active"><a href="#board-004-sub-001" class="a-inv" data-toggle="tab">POPULAR</a></li>
+                          <li><a href="#board-004-sub-002" class="a-inv" data-toggle="tab">RECENT</a></li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane fade in active" id="board-004-sub-001">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/1.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TIME FOR MINIMALISM</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">NEW TRENDS IN WEB</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">THE SOUND OF LIFE</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="board-004-sub-002">
+                            <div class="widget-body">
+                              <ul class="clearlist widget-posts">
+                                <li class="clearfix">
+                                  <a href=""><img src="images/blog/recent/4.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title=""> NULLA VITAE IMPERD</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">TAM EU QUAM </a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                                <li class="clearfix">
+                                  <a href=""><img src="images/shop/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                                  <div class="widget-posts-descr">
+                                    <a href="#" title="">ALIQUAM AC LUCTUS</a>
+                                    <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                                  </div>
+                                </li>
+      
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ADS -->
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="text-center mt-30 mb-50">
+                    <a href=""><img class="" src="images/ads720.jpg" alt="img"></a>
+                  </div> 
+
+                </div>
+              </div>
+              
+              
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-3 col-sm-3 col-md-3">     
+              
+              <!-- SEARCH -->
+              <div class="widget">
+                <form class="form-search widget-search-form" action="page-search-results.html" method="get">
+                  <input type="text" name="q" class="input-search-widget" placeholder="Search">
+                  <button class="" type="submit" title="Start Search">
+                    <span aria-hidden="true" class="icon_search"></span>
+                  </button>
+                </form>
+              </div>
+              
+              <!-- FAVORITE -->
+              <div class="widget">
+                <h5 class="widget-title">FAVORITE</h5>
+                <div class="widget-body">
+                  <div class="tags">
+                    <a href="">LIFE</a>
+                    <a href="">CLOTHES</a>
+                    <a href="">PET</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FIND FRIENDS -->
+              <div class="widget">
+                <h5 class="widget-title">FIND FRIENDS</h5>
+                <div class="widget-body">
+                  <ul class="clearlist widget-posts">
+                    <li class="clearfix">
+                      <a href=""><img src="images/blog/recent/1.jpg" alt="" class="widget-posts-img"></a>
+                      <div class="widget-posts-descr">
+                        <a href="#" title="">TIME FOR MINIMALISM</a>
+                        <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <a href=""><img src="images/blog/recent/2.jpg" alt="" class="widget-posts-img"></a>
+                      <div class="widget-posts-descr">
+                        <a href="#" title="">NEW TRENDS IN WEB</a>
+                        <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <a href=""><img src="images/blog/recent/3.jpg" alt="" class="widget-posts-img"></a>
+                      <div class="widget-posts-descr">
+                        <a href="#" title="">THE SOUND OF LIFE</a>
+                        <div>21 Jule<span class="slash-divider">/</span> John Doe</div> 
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- KEYWORDS -->
+              <div class="widget">
+                <h5 class="widget-title">HOT KEYWORDS</h5>
+                <div class="widget-body">
+                  <div class="tags">
+                    <a href="">#LIFE</a>
+                    <a href="">#CLOTHES</a>
+                    <a href="">#PET</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- IMAGE SLIDER -->
+              <div class="wow fadeIn" >
+                <h5 class="widget-title">REALTIME ISSUE</h5>
+                <!-- CAOUSEL SLIDER START -->
+                <div class="fullwidth-slider-auto owl-carousel owl-arrows-bg post-prev-img owl-white-bg pb-10" >
+                  <!-- Main AD Slider Item 001 START-->		
+                  <div class="item m-0">	
+                    <div class="mb-30">
+                      <img alt="about us" src="images/blog/post-wide-5.jpg">
+                    </div>
+                    <div class="post-prev-info mb-40">
+                      JULE 10<span class="slash-divider">/</span>
+                      <a href="">21 COMMENTS</a><span class="slash-divider">/</span>
+                      <a href="#">DESIGN</a>, <a href="#">DEVELOPMENT</a>
+                    </div>
+                  </div>
+                  <!-- Main AD Slider Item 001 END-->	
+                  <!-- Main AD Slider Item 002 START-->		
+                  <div class="item m-0">	
+                    <div class="mb-30">
+                      <img alt="about us" src="images/blog/post-wide-5.jpg">
+                    </div>
+                    
+                    <div class="post-prev-info mb-40">
+                      JULE 10<span class="slash-divider">/</span>
+                      <a href="">21 COMMENTS</a><span class="slash-divider">/</span>
+                      <a href="#">DESIGN</a>, <a href="#">DEVELOPMENT</a>
+                    </div>
+                  </div>
+                  <!-- Main AD Slider Item 002 END-->	
+                </div>
+                <!-- CAOUSEL SLIDER END -->
+              </div>
+              
+            </div>
+            
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12 blog-main-posts">
+              <!-- TITTLE -->
+              <div class="heading-line h4-line mb-20">
+                <h4><strong>OTHER NEWS</strong></h4>
+              </div>
+                        
+              <!-- CONTENT -->
+              <div class="row">
+              
+                <!-- Post Item -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70">
+                  <div class="post-prev-img">
+                    <a href="blog-single-sidebar-right.html"><img src="images/portfolio/projects-1.jpg" alt="img"></a>
+                  </div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">TIME FOR MINIMALISM</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    JULE 10<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">SPORT</a>
+                  </div>
+
+               </div>
+                              
+                <!-- Post Item -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70">
+                  <div class="post-prev-img">
+                    <a href="blog-single-sidebar-right.html"><img src="images/portfolio/projects-2.jpg" alt="img"></a>
+                  </div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">ENIM UT RISUS</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    JULE 10<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">DEVELOPMENT</a>
+                  </div>
+
+                </div>
+                              
+                <!-- Post Item -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70">
+                  <div class="post-prev-img">
+                    <a href="blog-single-sidebar-right.html"><img src="images/portfolio/projects-3.jpg" alt="img"></a>
+                  </div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">RISUS CURSUS AMET</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    JULE 10<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">DESIGN</a>
+                  </div>
+
+                </div>
+                
+                <!-- Post Item carousel -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70" >
+                    
+                  <!-- CAOUSEL  -->
+                								<div class="fullwidth-slider owl-carousel owl-dark-bg owl-pag-2 owl-arrows-bg post-prev-img" >
+                  
+                    <!-- ITEM -->		
+                									<div class="item m-0">	
+                										<div>
+                											<img alt="about us" src="images/portfolio/projects-4.jpg">
+                										</div>
+                									</div>
+                    
+                    <!-- ITEM -->		
+                									<div class="item m-0">	
+                										<div>
+                											<img alt="about us" src="images/portfolio/projects-5.jpg">
+                										</div>
+                									</div>
+                
+                    <!-- ITEM -->		
+                									<div class="item m-0">	
+                										<div>
+                											<img alt="about us" src="images/portfolio/projects-1.jpg">
+                										</div>
+                									</div>
+                    
+                								</div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">POST WITH SLIDER GALLERY</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    DECEMBER 21<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">CULTURE</a>
+                  </div>
+
+                </div>
+
+              </div>  
+              
+              <div class="row">
+
+                <!-- Post Item lightbox -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70">
+                  <div class="post-prev-img">
+                    
+                    <div class="lightbox-item">
+                      <a href="images/content/blog-big-1.jpg" class="lightbox">
+                        <div class="port-img-overlay">
+                          <img class="port-main-img" src="images/portfolio/projects-6.jpg" alt="img">
+                        </div>
+                        <div class="port-overlay-cont">
+                          <div class="port-btn-cont">
+                            <div aria-hidden="true" class="icon_search"></div>
+                          </div>
+                        </div>
+                      </a>  
+                    </div>
+                    
+                  </div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">POST WITH LIGHTBOX</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    JULE 10<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">DESIGN</a>
+                  </div>
+
+                </div>
+ 
+                <!-- Post Item lightbox -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70">
+                  <div class="post-prev-img">
+                    
+                    <div class="lightbox-item">
+                      <a href="images/content/blog-big-1.jpg" class="lightbox">
+                        <div class="port-img-overlay">
+                          <img class="port-main-img" src="images/portfolio/projects-7.jpg" alt="img">
+                        </div>
+                        <div class="port-overlay-cont">
+                          <div class="port-btn-cont">
+                            <div aria-hidden="true" class="icon_search"></div>
+                          </div>
+                        </div>
+                      </a>  
+                    </div>
+                    
+                  </div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">POST WITH LIGHTBOX</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    JULE 10<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">CULTURE</a>
+                  </div>
+
+                </div>
+ 
+                <!-- Post Item -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70">
+                  <div class="post-prev-img">
+                    <a href="blog-single-sidebar-right.html"><img src="images/portfolio/projects-5.jpg" alt="img"></a>
+                  </div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">TIME FOR MINIMALISM</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    JULE 10<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">SPORT</a>
+                  </div>
+               </div>
+                
+                <!-- Post Item carousel -->
+                <div class="col-sm-6 col-md-3 wow fadeIn pb-70" >
+                    
+                  <!-- CAOUSEL  -->
+                								<div class="fullwidth-slider owl-carousel owl-dark-bg owl-pag-2 owl-arrows-bg post-prev-img" >
+                  
+                    <!-- ITEM -->		
+                									<div class="item m-0">	
+                										<div>
+                											<img alt="about us" src="images/portfolio/projects-8.jpg">
+                										</div>
+                									</div>
+                    
+                    <!-- ITEM -->		
+                									<div class="item m-0">	
+                										<div>
+                											<img alt="about us" src="images/portfolio/projects-9.jpg">
+                										</div>
+                									</div>
+                
+                    <!-- ITEM -->		
+                									<div class="item m-0">	
+                										<div>
+                											<img alt="about us" src="images/portfolio/projects-5.jpg">
+                										</div>
+                									</div>
+                    
+                								</div>
+                    
+                  <div class="post-prev-title">
+                    <h3><a href="blog-single-sidebar-right.html">POST WITH SLIDER GALLERY</a></h3>
+                  </div>
+                    
+                  <div class="post-prev-info">
+                    DECEMBER 21<span class="slash-divider">/</span><a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel">JOHN DOE</a><span class="slash-divider">/</span><a href="#">PEOPLES</a>
+                  </div>
+
+                </div>
+                            
+              </div>
+            
+            </div>
+          </div>
+
+        </div>
+	        
+        <!-- NEWS LETTER -->
+        <div class="page-section nl-cont">
+          <div class="container">
+            <div class="relative" >
+              <div id="mc_embed_signup" class="nl-form-container clearfix">
+                <form action="http://abcgomel.us9.list-manage.com/subscribe/post-json?u=ba37086d08bdc9f56f3592af0&amp;id=e38247f7cc&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletterform validate" target="_blank" novalidate>   <!-- EDIT THIS ACTION URL (add "post-json?u" instead of "post?u" and appended "&amp;c=?" to the end of this URL) -->
+                  <input type="email" value="" name="EMAIL" class="email nl-email-input" id="mce-EMAIL" placeholder="Enter your email" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_ba37086d08bdc9f56f3592af0_e38247f7cc" tabindex="-1" value=""></div>
+          
+                  <input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button medium gray">
+                </form>
+                <div id="notification_container"  ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER 5 -->
+        <footer id="footer5" class="page-section pt-80 pb-50">
+          <div class="container">
+            <div class="row">
+            
+              <div class="col-md-3 col-sm-3 widget">
+                <div class="logo-footer-cont">
+                  <a href="index.html">
+                    <img class="logo-footer" src="images/logo-footer.png" alt="logo">
+                  </a>
+                </div>
+                <div class="footer-2-text-cont">
+                  <address>
+                    555 California str, Suite 100<br>
+                    San&nbsp;Francisco, CA 94107
+                  </address>
+                </div>
+                <div class="footer-2-text-cont">
+                  1-800-312-2121<br>
+                  1-800-310-1010
+                </div>
+                <div class="footer-2-text-cont">
+                  <a class="a-text" href="mailto:info@haswell.com">info@haswell.com</a>
+                </div>
+              </div>
+              
+              <div class="col-md-2 col-sm-2 widget">
+                <h4>NAVIGATE</h4>
+                <ul class="links-list bold a-text-cont">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="grid-system.html">GRID SYSTEM</a></li>
+                  <li><a href="services.html">SERVICES</a></li>
+                  <li><a href="index-portfolio.html">PORTFOLIO</a></li>
+                  <li><a href="index-blog.html">BLOG</a></li>
+                  <li><a href="index-shop.html">SHOP</a></li>
+                  <li><a href="intro.html">PAGES</a></li>
+                </ul>
+              </div>
+              
+              <!-- TWITTER FEEDS -->
+              <div class="col-md-4 col-sm-4 widget">
+                <h4>RECENT TWEETS</h4>
+                <div id="twitter-feeds"></div>
+              </div>
+              
+              <!-- FLICKR FEEDS -->
+              <div class="col-md-3 col-sm-3 widget">
+                <h4>FLICKR FEEDS</h4>
+                <ul id="flickr-feeds" class="popup-gallery clearfix mb-30"></ul>
+              </div>
+              
+            </div>    
+            
+            <div class="footer-2-copy-cont clearfix">
+              <!-- Social Links -->
+              <div class="footer-2-soc-a right">
+                <a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+                <a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
+              </div>
+              
+              <!-- Copyright -->
+              <div class="left">
+                <a class="footer-2-copy" href="http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel" target="_blank">&copy; HASWELL 2017</a>
+              </div>
+              
+
+            </div>
+                    
+          </div>
+        </footer>
+        
+				<!-- BACK TO TOP -->
+				<p id="back-top">
+          <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
+        </p>
+        
+			</div><!-- End BG -->	
+		</div><!-- End wrap -->	
+			
+<!-- JS begin -->
+
+		<!-- jQuery  -->
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>		
+
+		<!-- MAGNIFIC POPUP -->
+		<script src='js/jquery.magnific-popup.min.js'></script>
+    
+    <!-- PORTFOLIO SCRIPTS -->
+    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+    
+    <!-- COUNTER -->
+    <script type="text/javascript" src="js/jquery.countTo.js"></script>
+    
+    <!-- APPEAR -->    
+    <script type="text/javascript" src="js/jquery.appear.js"></script>
+    
+    <!-- FLICKR WIDGET -->
+		<script type="text/javascript" src="js/jflickrfeed.min.js"></script>
+    
+    <!-- JQUERY TWEETS -->
+		<script src="js/twitter/jquery.tweet.js"></script> 
+    
+    <!-- OWL CAROUSEL -->    
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    
+    <!-- MAIN SCRIPT -->
+		<script src="js/main.js"></script>
+    
+<!-- JS end -->	
+	
+	</body>
+</html>		
