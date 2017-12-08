@@ -62,17 +62,18 @@
     storageBucket: "xhproj1.appspot.com"
   };
   firebase.initializeApp(config);
-  var menu = document.getElementById('info');
+  
+  var menus= [];
+   
   var menuRef = firebase.database().ref().child('web/menus');
   menuRef.on('value',function(snapshot){
     snapshot.forEach(snap => {
-      snap.forEach(arr => {
-        console.log(arr.val().chn);
-      })
-    });
+      menus.push(snap.val());
       
   })
+   menus[0] = document.getElementById('info');
    
+   menu.innerHTML
   
 </script>
 <!-- Firebase -->
